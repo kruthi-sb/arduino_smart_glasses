@@ -4,7 +4,7 @@
 #define echoPin1 2    // echopin is connected to digitalpin 2 of arduino board
 
 
-int Vibrator1 = A5;     // setting the variable "Vibrator" to pin 4
+int Vibrator1 = A5;     // setting the variable "Vibrator" to pin 4 analog
 int distance1, duration1;   //defining these variables
 
 void setup() {  //run the program once
