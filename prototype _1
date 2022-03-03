@@ -10,10 +10,30 @@ int distance1, duration1;   //defining these variables
 void setup() {  //run the program once
     Serial.begin(9600);
 
-    pinMode(trigPin1, OUTPUT);
+    pinMode(trigPin1, OUTPUT); //sets the respective pin as I/O
     pinMode(echoPin1, INPUT);
     pinMode(Vibrator1, OUTPUT);
-    
+}
 
+void loop() {          //run the program in a loop contineously
+    digitalWrite(trigPin1, HIGH);  //turn ON the trig pin connected to us, take input and sends ultrasonic waves
+    delayMicroseconds(1000);  //delay in microseconds
+    digitalWrite(trigPin1, LOW);    //turn OFF trigpin, the waves stop getting emitted
+    duration = pulseIn(echoPin, HIGH);   //returns the time taken by the pulse to go and come back
+    distance = (duration/2)/29.1;     //have to look into this
+if(distance <=100 && distance >0) {  //within 1 meter
+    Serial.println("object detected\n");
+    Serial.print("distance = ");
+    Serial.print(distance);
+    digitalWrite(Vibrator1, HIGH);
+    digitalWrite(LED_BUILTIN, HIGH);
+}
 
+else {
+    Serialprintln("object not detected\n");
+    Serial.print("distance = ")
+    Serial.print(distance);
+    digitalWrite(Vibrator1, LOW);
+    digitalWrite(LED_BUILTIN, LOW);
+}
 }

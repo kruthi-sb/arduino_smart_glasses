@@ -36,6 +36,19 @@
     This command takes the same forms as Serial.print().
 9. Serial.write():
     Writes binary data to the serial port. This data is sent as a byte or series of bytes; to send the characters representing the digits of a number use the print() function instead.
-10. dealy("value"):
+10. delay("value"):
     waits for "value" milliseconds.
-            
+11. delayMicroseconds():
+    Pauses the program for the amount of time (in microseconds) specified by the parameter.            
+    There are a thousand microseconds in a millisecond and a million microseconds in a second.
+    Currently, the largest value that will produce an accurate delay is 16383; larger values can produce an extremely short delay. This could change in future Arduino releases. For delays longer than a few thousand microseconds, you should use delay() instead.
+12. pulseIn(echoPin, HIGH):
+    Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, pulseIn() waits for the pin to go from LOW to HIGH, starts timing, then waits for the pin to go LOW and stops timing.
+    Returns the length of the pulse in microseconds or gives up and returns 0 if no complete pulse was received within the timeout.
+    The timing of this function has been determined empirically and will probably show errors in longer pulses.
+    Works on pulses from 10 microseconds to 3 minutes in length.
+        pulseIn(pin, value)
+        pulseIn(pin, value, timeout)
+    pin: the number of the Arduino pin on which you want to read the pulse. Allowed data types: int.
+    value: type of pulse to read: either HIGH or LOW. Allowed data types: int.
+    timeout (optional): the number of microseconds to wait for the pulse to start; default is one second. Allowed data types: unsigned long.
