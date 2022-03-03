@@ -1,10 +1,10 @@
 // welcome to 1st project!
 
-#define trigPin1 3;    // The compiler will replace any mention of trigPin with the value 3 at compile time.
-#define echoPin1 2;    // echopin is connected to digitalpin 2 of arduino board
+#define trigPin1 3    // The compiler will replace any mention of trigPin with the value 3 at compile time.
+#define echoPin1 2    // echopin is connected to digitalpin 2 of arduino board
 
 
-int Vibrator1 = 4;     // setting the variable "Vibrator" to pin 4
+int Vibrator1 = A5;     // setting the variable "Vibrator" to pin 4
 int distance1, duration1;   //defining these variables
 
 void setup() {  //run the program once
@@ -25,7 +25,7 @@ if(distance1 <=10 && distance1 >0) {  //within 1 meter
     Serial.println("object detected\n");
     Serial.print("distance = ");
     Serial.print(distance1);
-    digitalWrite(Vibrator1, HIGH);
+    digitalWrite(Vibrator1, LOW);
     digitalWrite(LED_BUILTIN, HIGH);
 }
 
@@ -33,7 +33,7 @@ else {
     Serial.println("object not detected\n");
     Serial.print("distance = ");
     Serial.print(distance1);
-    digitalWrite(Vibrator1, LOW);
+    digitalWrite(Vibrator1, HIGH);
     digitalWrite(LED_BUILTIN, LOW);
 }
 }
