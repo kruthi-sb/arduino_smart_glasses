@@ -1,0 +1,19 @@
+// welcome to 1st project!
+
+#define trigPin1 3;    // The compiler will replace any mention of trigPin with the value 3 at compile time.
+#define echoPin1 2;    // echopin is connected to digitalpin 2 of arduino board
+
+
+int Vibrator1 = 4;     // setting the variable "Vibrator" to pin 4
+int distance1, duration1;   //defining these variables
+
+void setup() {  //run the program once
+    Serial.begin(9600);
+
+    pinMode(trigPin1, OUTPUT);
+    pinMode(echoPin1, INPUT);
+    pinMode(Vibrator1, OUTPUT);
+    
+
+
+}
