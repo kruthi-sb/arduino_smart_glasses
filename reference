@@ -1,0 +1,54 @@
+1. Serial.begin(9600):
+    Firstly, we have the command 'Serial.begin(9600)'. 
+    This starts serial communication, so that the Arduino can send out commands through the USB connection. 
+    The value 9600 is called the 'baud rate' of the connection. 
+    This is how fast the data is to be sent.
+2. #define constantName value:
+    #define is a useful C++ component that allows the programmer to give a name to a constant value before the program is compiled. 
+    Defined constants in arduino don’t take up any program memory space on the chip. 
+    The compiler will replace references to these constants with the defined value at compile time.
+3. int:
+    datatype: variable = integer(pin)
+4. pinMode():
+    Configures the specified pin to behave either as an input or an output. 
+    Arduino (Atmega) pins default to inputs, so they don't need to be explicitly declared as inputs with pinMode() when you're using them as inputs. 
+    Pins configured this way are said to be in a high-impedance state.
+    	pinMode(pin, INPUT);           // set pin to input
+5. digitalWrite():
+    If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
+    If you do not set the pinMode() to OUTPUT, and connect an LED to a pin, when calling digitalWrite(HIGH), the LED may appear dim. 
+    Without explicitly setting pinMode(), digitalWrite() will have enabled the internal pull-up resistor, which acts like a large current-limiting resistor.
+    The analog input pins can be used as digital pins, referred to as A0, A1, etc. The exception is the Arduino Nano, Pro Mini, and Mini’s A6 and A7 pins, which can only be used as analog inputs.
+        digitalWrite(pin, value)
+6. digitalRead():
+    Reads the value from a specified digital pin, either HIGH or LOW.
+    If the pin isn’t connected to anything, digitalRead() can return either HIGH or LOW (and this can change randomly).
+    The analog input pins can be used as digital pins, referred to as A0, A1, etc. The exception is the Arduino Nano, Pro Mini, and Mini’s A6 and A7 pins, which can only be used as analog inputs.
+        digitalRead(pin)
+7. Serial.print():
+    Prints data to the serial port as human-readable ASCII text. This command can take many forms. 
+    Numbers are printed using an ASCII character for each digit.
+        Serial.print(1.23456) gives "1.23"
+        Serial.print('N') gives "N"
+        Serial.print("Hello world.") gives "Hello world."
+8. Serial.print():
+    prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). 
+    This command takes the same forms as Serial.print().
+9. Serial.write():
+    Writes binary data to the serial port. This data is sent as a byte or series of bytes; to send the characters representing the digits of a number use the print() function instead.
+10. delay("value"):
+    waits for "value" milliseconds.
+11. delayMicroseconds():
+    Pauses the program for the amount of time (in microseconds) specified by the parameter.            
+    There are a thousand microseconds in a millisecond and a million microseconds in a second.
+    Currently, the largest value that will produce an accurate delay is 16383; larger values can produce an extremely short delay. This could change in future Arduino releases. For delays longer than a few thousand microseconds, you should use delay() instead.
+12. pulseIn(echoPin, HIGH):
+    Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, pulseIn() waits for the pin to go from LOW to HIGH, starts timing, then waits for the pin to go LOW and stops timing.
+    Returns the length of the pulse in microseconds or gives up and returns 0 if no complete pulse was received within the timeout.
+    The timing of this function has been determined empirically and will probably show errors in longer pulses.
+    Works on pulses from 10 microseconds to 3 minutes in length.
+        pulseIn(pin, value)
+        pulseIn(pin, value, timeout)
+    pin: the number of the Arduino pin on which you want to read the pulse. Allowed data types: int.
+    value: type of pulse to read: either HIGH or LOW. Allowed data types: int.
+    timeout (optional): the number of microseconds to wait for the pulse to start; default is one second. Allowed data types: unsigned long.
