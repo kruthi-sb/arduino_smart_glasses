@@ -1,13 +1,43 @@
-# smart_goggles_coding
-our first project!
+# arduino_smart_goggles_for_blind
 
-The "our_documentation" includes the definitions of all keywords amd functions used in our arduino code.
-we have 2 prototypes:
+***FOLKS INTERESTED IN CONTRIBUTING TO THE PROJECT FOR FURTHER IMPROVEMENTS ARE WELCOME. THEY CAN CONTACT:
+Kruthi S B, mail: kruthi.banakar@gmail.com
+WE WOULD BE VERY DELIGHTED TO COLLABORATE WITH YOU!***
+
+ABOUT: 
+This is our first Arduino-based project which aims to help the visiually impaired people to detect objects they come accross.
+
+COMPONENTS USED:
+Ultrasonic sensors - 2
+Mini Vibration Motors - 2
+Arduino Nano Board - 1
+Jumper Wires - as much required
+:goggles: Goggles - 1
+Battery(9V) - 1
+
+WORKING:
+The Ultrasnic sensors play a key role in our project. They calculate the distance of the object by sending and recieving Ultrasonic waves and processing the time required for the waves to propagate. Accordingly, we write the code on whether the object is detected or not.
+If the object is detected by the right ultrasonic sensor, the Vibrator placed at the right vibrates, and vice versa.
+If the object is detected by both sensors, then both the vibrators vibrate indicating that the object is infront of the person.
+This way, the person wearing the goggles can detect the object placed right, left and in front of the person. 
+
+PROTOTYPES:
+1. prototype1: uses 1 ultrasonic sensor and 1 vibrator. This is for testing purpose only.
+2. prototype2: uses 2 ultrasonic sensors and 2 vibrators.
+
+HOW TO USE THE PROJECT:
+circuit_diagram: includes the circuit diagram for the prototype2.
+other_resources: includes resources on how to do the project as well as additional features to be included in the project prototype.
+definitions: includes the Keyword definitions. 
+prototype1 & prototype2 code: can be run on the Arduino IDE and be uploaded to Arduino Nano after the connecions.
+
+CREDITS:
+Nitisha-Patil, https://github.com/Nitisha-Patil
+Keerthi1729, https://github.com/Keerthi1729
+kruthi-sb, https://github.com/kruthi-sb
 
 
-1. prototype_1: uses 1 ultrasonic sensor and 1 vibrator.
-2. prototype_2: uses 2 ultrasonic sensors and 2 vibrators:
-    2.1: usR - right sensor, 
-    2.2: usL - left sensor, 
-    2.3: vR - right Vibrator, 
-    2.4: vL - left Vibrator.
+
+***FOLKS INTERESTED IN CONTRIBUTING TO THE PROJECT FOR FURTHER IMPROVEMENTS ARE WELCOME. THEY CAN CONTACT:
+Kruthi S B, mail: kruthi.banakar@gmail.com
+WE WOULD BE VERY DELIGHTED TO COLLABORATE WITH YOU! PLEASE REACHOUT SOON.***

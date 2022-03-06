@@ -1,3 +1,21 @@
-ultrasonic sensor calculating angle theta:
-https://create.arduino.cc/projecthub/abhilashpatel121/ultrasound-sensor-2d-tracking-with-arduino-d0b974
+The videos, articles, documents we refered:
+
+1. OMG Yeh Mera India story: https://youtu.be/28bo2bzyDAA
+2. connections using buzzer: https://youtu.be/-_V3mf3AW4k
+3. connections using virator: https://youtu.be/b_yDBDfCypY
+4. information on Ultrasonic sensor: https://create.arduino.cc/projecthub/abdularbi17/ultrasonic-sensor-hc-sr04-with-arduino-tutorial-327ff6
+5. external report: https://github.com/kruthi-sb/smart_goggles_coding/files/8192065/smart-glasses-for-blind-people-report.pdf
+
+
+Here are some additional features which can be added to the project:
+
+1. Ultrasonic sensor calculating angle theta: https://create.arduino.cc/projecthub/abhilashpatel121/ultrasound-sensor-2d-tracking-with-arduino-d0b974
+2. Facial Recognition: https://www.electronicsforu.com/electronics-projects/new-facial-recognition-smart-glasses-for-visually-challenged-person
+
+
+Inspiration: 
+
+1. Aravind Eye Care System: https://youtu.be/21bbf8SHVKc
+2. Envision: https://www.youtube.com/watch?v=9ehENnq2EFo 
+     
 
