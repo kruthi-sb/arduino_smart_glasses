@@ -1,3 +1,3 @@
-Contributors are welcome!
-You can mail:
-Kruthi S B, kruthi.banakar@gmail.com
+🌟☄️FOLKS INTERESTED IN CONTRIBUTING TO THE PROJECT FOR FURTHER IMPROVEMENTS ARE WELCOME. 
+THEY CAN CONTACT: Kruthi S B, mail: kruthi.banakar@gmail.com 
+WE WOULD BE VERY DELIGHTED TO COLLABORATE WITH YOU! PLEASE REACHOUT SOON.☄️🌟
