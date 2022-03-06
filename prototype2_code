@@ -1,0 +1,80 @@
+// welcome to 1st project!
+
+#define trigPin1 3    // The compiler will replace any mention of trigPin with the value 3 at compile time.
+#define echoPin1 2    // echopin is connected to digitalpin 2 of arduino board
+#define trigPin2 12   // trigpin is connected to digitalpin 12 of arduino board
+#define echoPin2 11   // echopin is connected to digitalpin 11 of arduino board
+
+int Vibrator1 = A5;     // setting the variable "Vibrator1" to analog pin 5
+int Vibrator2 = A2;     // setting the variable "Vibrator2" to analog pin 2
+int distance1, duration1, distance2, duration2;   //defining these variables
+
+void setup() {  //run the program once
+    Serial.begin(9600);   //This starts serial communication, so that the Arduino can send out commands through the USB connection.
+
+    pinMode(trigPin1, OUTPUT); //sets the respective pin as I/O
+    pinMode(echoPin1, INPUT);
+    pinMode(Vibrator1, OUTPUT);
+    pinMode(trigPin2, OUTPUT); 
+    pinMode(echoPin2, INPUT);
+    pinMode(Vibrator2, OUTPUT);
+}
+
+void loop() {          //run the program in a loop contineously
+
+//for ultrasonic sensor1:
+    digitalWrite(trigPin1, HIGH);  //turn ON the trig pin connected to us, take input and sends ultrasonic waves
+    delayMicroseconds(1000);  //delay in microseconds
+    digitalWrite(trigPin1, LOW);    //turn OFF trigpin, the waves stop getting emitted
+    duration1 = pulseIn(echoPin1, HIGH);   //returns the time taken by the pulse to go and come back
+    distance1 = (duration1/2)/29.1;     //have to look into this
+
+//for ultrasonic sensor2:
+    digitalWrite(trigPin2, HIGH);  //turn ON the trig pin connected to us, take input and sends ultrasonic waves
+    delayMicroseconds(1000);  //delay in microseconds
+    digitalWrite(trigPin2, LOW);    //turn OFF trigpin, the waves stop getting emitted
+    duration2 = pulseIn(echoPin2, HIGH);   //returns the time taken by the pulse to go and come back
+    distance2 = (duration2/2)/29.1;     //have to look into this
+
+
+
+
+
+//loops:
+//sensor1:
+
+if(distance1 <=100 && distance1 >0) {  //if the object is detected by sensor1 within 1 meter.
+    Serial.println("object detected in US1\n");  //prints this string in the serial monitor.
+    Serial.print("distance1 = ");  //prints this string in the serial monitor.
+    Serial.print(distance1);    //prints the distance sensed by ultrasonic sensor1
+    digitalWrite(Vibrator1, LOW);  //the vibrator1 vibrators
+    digitalWrite(LED_BUILTIN, HIGH);  //the led-inbuilt turns ON
+}
+
+else { //if object not detected 
+    Serial.println("object not detected in US1\n");
+    Serial.print("distance = ");
+    Serial.print(distance1);
+    digitalWrite(Vibrator1, HIGH); //the vibrator1 stops vibrating
+    digitalWrite(LED_BUILTIN, LOW); //the led-inbuilt turns OFF
+}
+
+//sensor2:
+
+if(distance2 <=100 && distance2 >0) {  //if the object is detected by sensor2 within 1 meter.
+    Serial.println("object detected in US2\n");
+    Serial.print("distance2 = ");
+    Serial.print(distance2);
+    digitalWrite(Vibrator2, LOW);  //the vibrator2 vibrators
+    digitalWrite(LED_BUILTIN, HIGH);  //the led-inbuilt turns ON
+}
+
+else {
+    Serial.println("object not detected in US2\n");
+    Serial.print("distance2 = ");
+    Serial.print(distance2);
+    digitalWrite(Vibrator2, HIGH);  //the vibrator2 stops vibrating
+    digitalWrite(LED_BUILTIN, LOW);   //the led-inbuilt turns OFF
+
+}
+}
