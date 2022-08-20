@@ -33,8 +33,3 @@ CREDITS:
 :point_right:Nitisha-Patil, https://github.com/Nitisha-Patil
 :point_right:Keerthi1729, https://github.com/Keerthi1729
 :point_right:kruthi-sb, https://github.com/kruthi-sb
-
-
-:star2::comet:***FOLKS INTERESTED IN CONTRIBUTING TO THE PROJECT FOR FURTHER IMPROVEMENTS ARE WELCOME. THEY CAN CONTACT:
-Kruthi S B, mail: kruthi.banakar@gmail.com
-WE WOULD BE VERY DELIGHTED TO COLLABORATE WITH YOU! PLEASE REACHOUT SOON.***:comet::star2:
